@@ -77,7 +77,7 @@ public class Estudiante {
         return promedio;
     }
 
-    public void escribirPromedio(String pro){
+    public String escribirPromedio(String pro){
         String concatenacion = "";
         for (int i = 0; i < 3; i++){
         switch (pro.charAt(i)){
@@ -116,7 +116,7 @@ public class Estudiante {
                 break;
         }
     }
-        System.out.println(concatenacion);
+        return concatenacion;
     }
 
 }

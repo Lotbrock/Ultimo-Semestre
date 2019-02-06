@@ -38,7 +38,7 @@ public class App {
             System.out.println("El promedio del estudiante es:");
             System.out.println(juan.sacarPromedio());
             String promedio = Float.toString(juan.getPromedio());
-            juan.escribirPromedio(promedio);
+            System.out.println(juan.escribirPromedio(promedio));
 
     }
 }
