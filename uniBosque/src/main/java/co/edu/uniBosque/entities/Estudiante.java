@@ -1,30 +1,72 @@
-package co.edu.uniBosque.estudiante;
+package co.edu.uniBosque.entities;
 
-import javax.swing.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
 public class Estudiante {
-    public String name = "julian";
-    public String apellido = "Fajardo";
-    public String tipoDocumento = "Cedula de ciudadania";
-    public String identificacion = "10100911473";
-    public String carrera = "Veterinaria";
-    public Float materia1;
-    public Float materia2;
-    public Float materia3;
-    public Float materia4;
-    public Float materia5;
-    public Float promedio;
-    public Double ejemplo = 3.8;
+    @Id
+    @GeneratedValue
+    private int id;
+    private String nombre;
+    private String apellido;
+    private TipoDocumento tipoDocumento;
+    private String identificacion;
+    private String carrera ;
+    private Float materia1;
+    private Float materia2;
+    private Float materia3;
+    private Float materia4;
+    private Float materia5;
+    private Float promedio;
 
-    @Override
-    public String toString() {
-        return "Estudiante{" +
-                "nombre='" + name + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", tipoDocumento='" + tipoDocumento + '\'' +
-                ", identificacion='" + identificacion + '\'' +
-                ", carrera='" + carrera + '\'' +
-                '}';
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public TipoDocumento getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
+
+    public String getIdentificacion() {
+        return identificacion;
+    }
+
+    public void setIdentificacion(String identificacion) {
+        this.identificacion = identificacion;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
     }
 
     public Float getMateria1() {
@@ -69,6 +111,21 @@ public class Estudiante {
 
     public Float getPromedio() {
         return promedio;
+    }
+
+    public void setPromedio() {
+        this.promedio = sacarPromedio();
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", tipoDocumento='" + tipoDocumento + '\'' +
+                ", identificacion='" + identificacion + '\'' +
+                ", carrera='" + carrera + '\'' +
+                '}';
     }
 
     public Float sacarPromedio(){

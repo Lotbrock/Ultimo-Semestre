@@ -1,12 +1,13 @@
 package co.edu.uniBosque.formularios;
 
-import co.edu.uniBosque.estudiante.Estudiante;
+import co.edu.uniBosque.conexiones.Conexion;
+import co.edu.uniBosque.entities.Estudiante;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.EventListener;
+import java.sql.Connection;
 
 public class Formulario extends JFrame implements ActionListener {
     Estudiante est1 =new Estudiante();
@@ -22,8 +23,11 @@ public class Formulario extends JFrame implements ActionListener {
     private JLabel label6;
     private JTextField caja5;
     private JButton boton1;
+    private JButton boton2;
     public Formulario() throws HeadlessException {
         setLayout(null);
+        setBounds(20,20,666,666);
+        this.setLocationRelativeTo(null);
         label1 = new JLabel("Universidad del Bosque");
         label1.setBounds(260,10,200,30);
         label1.setSize(500,10);
@@ -74,6 +78,11 @@ public class Formulario extends JFrame implements ActionListener {
         add(boton1);
         boton1.addActionListener(this);
 
+        boton2 = new JButton("Volver a inicio");
+        boton2.setBounds(10,600,130,20);
+        add(boton2);
+        boton2.addActionListener(this);
+
 
     }
     /*private float sumarNotas(){
@@ -83,28 +92,44 @@ public class Formulario extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-        if (e.getSource() == boton1) {
-            String cad1 = caja1.getText();
-            est1.setMateria1(Float.parseFloat(cad1));
+        if (e.getSource() == boton2){
 
-            cad1 = caja2.getText();
-            est1.setMateria2(Float.parseFloat(cad1));
-
-            cad1 = caja3.getText();
-            est1.setMateria3(Float.parseFloat(cad1));
-
-            cad1 = caja4.getText();
-            est1.setMateria4(Float.parseFloat(cad1));
-
-            cad1 = caja5.getText();
-            est1.setMateria5(Float.parseFloat(cad1));
-
-            String cadena1 = est1.sacarPromedio().toString();
-
-            JOptionPane.showMessageDialog(null, cadena1+"\\"+est1.escribirPromedio(cadena1));
-
-           // setTitle(est1.escribirPromedio(cadena1));
-
+            FormularioInicio form1 = new FormularioInicio();
+            form1.setVisible(true);
+            this.setVisible(false);
         }
+
+        if (e.getSource() == boton1) {
+
+            //Se abre conexion para hacer uso de la base de datos
+            Conexion.abrirConexion();
+                String cad1 = caja1.getText();
+                est1.setMateria1(Float.parseFloat(cad1));
+
+                cad1 = caja2.getText();
+                est1.setMateria2(Float.parseFloat(cad1));
+
+                cad1 = caja3.getText();
+                est1.setMateria3(Float.parseFloat(cad1));
+
+                cad1 = caja4.getText();
+                est1.setMateria4(Float.parseFloat(cad1));
+
+                cad1 = caja5.getText();
+                est1.setMateria5(Float.parseFloat(cad1));
+
+                est1.setPromedio();
+
+                Conexion.guardarEstudiante(est1);//Guarda el estudiante
+                Conexion.cerrarConexion();
+/*
+                String cadena1 = est1.sacarPromedio().toString();
+
+                JOptionPane.showMessageDialog(null, cadena1 + "\\" + est1.escribirPromedio(cadena1));*/
+
+                // setTitle(est1.escribirPromedio(cadena1));
+
+            }
+
     }
 }

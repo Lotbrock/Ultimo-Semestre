@@ -9,5 +9,8 @@
         <module name="uniBosque" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="uniBosque" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

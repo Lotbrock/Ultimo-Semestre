@@ -1,4 +1,4 @@
-package co.edu.uniBosque.estudiante;
+package co.edu.uniBosque.entities;
 
 import java.util.Scanner;
 
@@ -35,7 +35,7 @@ public class App {
             System.out.println("Digite la nota de la materia 5");
             Scanner sc4 = new Scanner(System.in);
             juan.setMateria5(Float.parseFloat(sc4.next()));
-            System.out.println("El promedio del estudiante es:");
+            System.out.println("El promedio del entities es:");
             System.out.println(juan.sacarPromedio());
             String promedio = Float.toString(juan.getPromedio());
             System.out.println(juan.escribirPromedio(promedio));

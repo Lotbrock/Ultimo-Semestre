@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit nombre="unidadPersistencia01" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>co.edu.uniBosque.entities.Estudiante</class>
+        <class>co.edu.uniBosque.entities.TipoDocumento</class>
+
+        <properties>
+            <property nombre="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:4306/prueba01?useTimezone=true&amp;serverTimezone=UTC"/>
+            <property nombre="javax.persistence.jdbc.user" value="root"/>
+            <property nombre="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property nombre="javax.persistence.jdbc.password" value="123456789"/>
+            <property nombre="javax.persistence.schema-generation.database.action" value="create"/>
+            <property nombre="eclipselink.logging.level.sql" value="ALL"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
