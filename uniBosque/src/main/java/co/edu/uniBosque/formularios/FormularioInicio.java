@@ -48,9 +48,11 @@ public class FormularioInicio extends JFrame implements ActionListener {
 
             Conexion.abrirConexion();
             Interface.setDocumento(documento);
-            Estudiante est1= Conexion.buscarEstudiante(documento);
 
-            System.out.println(est1.toString());
+
+            Interface.setEstudiante(Conexion.buscarEstudiante(documento));
+            Conexion.cerrarConexion();
+           // System.out.println(Interface.estudiante.toString());
             form2.setVisible(true);
             this.setVisible(false);
         }
