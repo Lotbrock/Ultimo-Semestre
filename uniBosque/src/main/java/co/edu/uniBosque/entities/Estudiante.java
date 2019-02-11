@@ -1,13 +1,15 @@
 package co.edu.uniBosque.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="Estudiante",
+        uniqueConstraints=@UniqueConstraint(columnNames={"identificacion"}))
+@NamedQuery(query = "Select e from Estudiante e where e.identificacion = :identificacion", name = "find student by id")
 public class Estudiante {
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator="InvSeq")
+    @SequenceGenerator(name="InvSeq",sequenceName="INV_SEQ", allocationSize=1)
     private int id;
     private String nombre;
     private String apellido;

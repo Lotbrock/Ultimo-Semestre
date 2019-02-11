@@ -3,11 +3,13 @@ package co.edu.uniBosque.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class TipoDocumento {
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator="InvSeq")
+    @SequenceGenerator(name="InvSeq",sequenceName="INV_SEQ", allocationSize=1)
     private int id;
 
     private String sigla;

@@ -2,10 +2,7 @@ package co.edu.uniBosque.conexiones;
 
 import co.edu.uniBosque.entities.Estudiante;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceException;
+import javax.persistence.*;
 
 public class Conexion {
     private static EntityManagerFactory emf;
@@ -33,6 +30,13 @@ public class Conexion {
         }catch (PersistenceException e){
             System.err.println(e.getMessage());
         }
+    }
+    public static Estudiante buscarEstudiante(String documento){
+        Query query = em.createNamedQuery("find student by id");
+        query.setParameter("identificacion", documento);
+
+        Estudiante e = (Estudiante)query.getSingleResult();
+        return e;
     }
 
     public static void cerrarConexion(){

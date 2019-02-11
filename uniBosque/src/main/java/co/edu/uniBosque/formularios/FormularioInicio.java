@@ -1,5 +1,9 @@
 package co.edu.uniBosque.formularios;
 
+import co.edu.uniBosque.Interface;
+import co.edu.uniBosque.conexiones.Conexion;
+import co.edu.uniBosque.entities.Estudiante;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -38,6 +42,15 @@ public class FormularioInicio extends JFrame implements ActionListener {
 
         if (e.getSource() == boton2){
             FormularioNotas form2 = new FormularioNotas();
+            String documento = JOptionPane.showInputDialog(
+                    null,"Documento del estudiante",
+            JOptionPane.QUESTION_MESSAGE); // el icono sera un iterrogante
+
+            Conexion.abrirConexion();
+            Interface.setDocumento(documento);
+            Estudiante est1= Conexion.buscarEstudiante(documento);
+
+            System.out.println(est1.toString());
             form2.setVisible(true);
             this.setVisible(false);
         }
