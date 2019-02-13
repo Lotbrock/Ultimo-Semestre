@@ -11,11 +11,13 @@ public class Estudiante {
     @GeneratedValue(generator="InvSeq")
     @SequenceGenerator(name="InvSeq",sequenceName="INV_SEQ", allocationSize=1)
     private int id;
+    @Column(name = "nombre", nullable = false)
     private String nombre;
+    @Column(name = "apellido", nullable = false)
     private String apellido;
     private TipoDocumento tipoDocumento;
     private String identificacion;
-    private String carrera ;
+    private Carrera carrera ;
     private Float materia1;
     private Float materia2;
     private Float materia3;
@@ -63,11 +65,11 @@ public class Estudiante {
         this.identificacion = identificacion;
     }
 
-    public String getCarrera() {
+    public Carrera getCarrera() {
         return carrera;
     }
 
-    public void setCarrera(String carrera) {
+    public void setCarrera(Carrera carrera) {
         this.carrera = carrera;
     }
 

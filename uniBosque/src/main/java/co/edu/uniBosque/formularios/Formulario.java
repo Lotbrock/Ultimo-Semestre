@@ -61,9 +61,9 @@ public class Formulario extends JFrame implements ActionListener {
         label1 = new JLabel("Carrera");
         label1.setBounds(10,180,200,20);
         add(label1);
-        caja9 = new JTextField();
+        /*caja9 = new JTextField();
         caja9.setBounds(150,178,80,20);
-        add(caja9);
+        add(caja9);*/
 
 
         /*---------------------------------MATERIAS-------------*/
@@ -129,14 +129,13 @@ public class Formulario extends JFrame implements ActionListener {
         if (e.getSource() == boton2){
 
             FormularioInicio form1 = new FormularioInicio();
+            form1.setLocationRelativeTo(null);
             form1.setVisible(true);
             this.setVisible(false);
         }
 
         if (e.getSource() == boton1) {
             FormularioInicio form2 = new FormularioInicio();
-            //Se abre conexion para hacer uso de la base de datos
-            Conexion.abrirConexion();
 
                 String cad1 = caja1.getText();
                 est1.setMateria1(Float.parseFloat(cad1));
@@ -165,14 +164,9 @@ public class Formulario extends JFrame implements ActionListener {
                 est1.setIdentificacion(cad1);
 
 
-                cad1 = caja9.getText();
-                est1.setCarrera(cad1);
-
-
                 est1.setPromedio();
 
                 Conexion.guardarEstudiante(est1);//Guarda el estudiante
-                Conexion.cerrarConexion();
 
                 form2.setVisible(true);
                 this.setVisible(false);

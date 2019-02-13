@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 public class FormularioInicio extends JFrame implements ActionListener {
     private JLabel label1;
     private JButton boton1;
+    private JButton boton3;
     private JButton boton2;
     private Formulario form1 = new Formulario();
     public FormularioInicio() throws HeadlessException {
@@ -32,6 +33,11 @@ public class FormularioInicio extends JFrame implements ActionListener {
         boton2.setBounds(10,600,200,20);
         add(boton2);
         boton2.addActionListener(this);
+
+        boton3 = new JButton("Cerrar Aplicacion");
+        boton3.setBounds(230,600,200,20);
+        add(boton3);
+        boton3.addActionListener(this);
     }
 
     public void actionPerformed(ActionEvent e) {
@@ -46,15 +52,18 @@ public class FormularioInicio extends JFrame implements ActionListener {
                     null,"Documento del estudiante",
             JOptionPane.QUESTION_MESSAGE); // el icono sera un iterrogante
 
-            Conexion.abrirConexion();
             Interface.setDocumento(documento);
 
 
             Interface.setEstudiante(Conexion.buscarEstudiante(documento));
-            Conexion.cerrarConexion();
-           // System.out.println(Interface.estudiante.toString());
+            System.out.println(Interface.estudiante.toString());
             form2.setVisible(true);
             this.setVisible(false);
+        }
+
+        if (e.getSource()== boton3){
+            Conexion.cerrarConexion();
+            System.exit(0);
         }
     }
 }

@@ -8,6 +8,7 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>co.edu.uniBosque.entities.Estudiante</class>
         <class>co.edu.uniBosque.entities.TipoDocumento</class>
+        <class>co.edu.uniBosque.entities.Carrera</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:4306/prueba01?useTimezone=true&amp;serverTimezone=UTC" />

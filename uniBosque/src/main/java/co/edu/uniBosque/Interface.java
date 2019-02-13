@@ -1,5 +1,6 @@
 package co.edu.uniBosque;
 
+import co.edu.uniBosque.conexiones.Conexion;
 import co.edu.uniBosque.entities.Estudiante;
 import co.edu.uniBosque.formularios.FormularioInicio;
 
@@ -7,6 +8,9 @@ public class Interface {
     private static String documento;
     public static Estudiante estudiante;
     public static void main(String[] args) {
+
+        Conexion.abrirConexion();//Se abre la conexion "prueba01"
+
 
         FormularioInicio interfaece = new FormularioInicio();
         //interfaece.setBounds(20,20,666,666);
