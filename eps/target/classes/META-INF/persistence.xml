@@ -13,6 +13,8 @@
         <class>co.edu.sena.eps.entities.Ips</class>
         <class>co.edu.sena.eps.entities.Cotizante</class>
         <class>co.edu.sena.eps.entities.Beneficiario</class>
+        <class>co.edu.sena.eps.entities.Cargo</class>
+        <class>co.edu.sena.eps.entities.Funcionario</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:4306/eps?useTimezone=true&amp;serverTimezone=UTC" />
