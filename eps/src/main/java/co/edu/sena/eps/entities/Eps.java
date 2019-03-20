@@ -6,6 +6,8 @@ import javax.persistence.*;
 @Table(name = "Eps", uniqueConstraints =@UniqueConstraint(name = "Unique_nit",columnNames = {"nit_eps"}))
 public class Eps {
     @Id
+    @GeneratedValue(generator="InvSeq")
+    @SequenceGenerator(name="InvSeq",sequenceName="INV_SEQ", allocationSize=1)
     private int id;
     @Column(name = "nombre_eps", nullable = false)
     private String nombreEPS;
