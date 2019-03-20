@@ -9,6 +9,8 @@ import java.util.Set;
         uniqueConstraints=@UniqueConstraint(columnNames={"nombre_cargo"}))
 public class Cargo {
     @Id
+    @GeneratedValue(generator="InvSeq")
+    @SequenceGenerator(name="InvSeq",sequenceName="INV_SEQ", allocationSize=1)
     private Long id;
     @Column(name = "nombre_cargo", nullable = false)
     private String nombreCargo;

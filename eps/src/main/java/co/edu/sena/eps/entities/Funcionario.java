@@ -8,6 +8,8 @@ import java.util.Set;
 @Table(name = "Funcionario")
 public class Funcionario {
     @Id
+    @GeneratedValue(generator="InvSeq")
+    @SequenceGenerator(name="InvSeq",sequenceName="INV_SEQ", allocationSize=1)
     private Long id;
     @OneToOne
     private Usuario idUsuario;
