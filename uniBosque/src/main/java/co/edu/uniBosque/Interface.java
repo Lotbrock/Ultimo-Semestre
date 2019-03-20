@@ -5,7 +5,7 @@ import co.edu.uniBosque.entities.Estudiante;
 import co.edu.uniBosque.formularios.FormularioInicio;
 
 public class Interface {
-    private static String documento;
+    private static String documento = "";
     public static Estudiante estudiante;
     public static void main(String[] args) {
 

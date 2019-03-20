@@ -4,16 +4,14 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
 
-    <persistence-unit name="unidadPersistencia01" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="epsPersistence" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 
-
-        <class>co.edu.uniBosque.entities.Estudiante</class>
-        <class>co.edu.uniBosque.entities.TipoDocumento</class>
-        <class>co.edu.uniBosque.entities.Carrera</class>
+        <class>co.edu.sena.eps.entities.TipoDocumento</class>
+        <class>co.edu.sena.eps.entities.Usuario</class>
 
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:4306/prueba01?useTimezone=true&amp;serverTimezone=UTC" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:4306/eps?useTimezone=true&amp;serverTimezone=UTC" />
             <property name="javax.persistence.jdbc.user" value="root"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.password" value="123456789"/>

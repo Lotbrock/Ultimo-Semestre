@@ -51,7 +51,6 @@ public class FormularioInicio extends JFrame implements ActionListener {
             String documento = JOptionPane.showInputDialog(
                     null,"Documento del estudiante",
             JOptionPane.QUESTION_MESSAGE); // el icono sera un iterrogante
-
             Interface.setDocumento(documento);
 
 
