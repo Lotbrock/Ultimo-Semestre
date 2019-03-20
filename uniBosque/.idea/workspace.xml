@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d351b43-72af-4cf0-814d-66101f5ff1cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../eps/src/main/java/co/edu/sena/eps/entities/Eps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eps/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eps/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eps/src/main/java/co/edu/sena/eps/entities/Ips.java" beforeDir="false" afterPath="$PROJECT_DIR$/../eps/src/main/java/co/edu/sena/eps/entities/Ips.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../eps/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eps/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eps/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eps/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -237,7 +240,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553104321079" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553104471211" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
