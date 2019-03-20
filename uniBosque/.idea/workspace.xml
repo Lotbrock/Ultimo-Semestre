@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d351b43-72af-4cf0-814d-66101f5ff1cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../eps/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/eps.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/src/main/java/co/edu/sena/eps/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/src/main/java/co/edu/sena/eps/conexion/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/src/main/java/co/edu/sena/eps/entities/TipoDocumento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/src/main/java/co/edu/sena/eps/entities/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../eps/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniBosque/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniBosque/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniBosque/formularios/FormularioInicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniBosque/formularios/FormularioInicio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniBosque/formularios/FormularioNotas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniBosque/formularios/FormularioNotas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eps/src/main/java/co/edu/sena/eps/entities/Eps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eps/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../eps/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -251,7 +237,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553103719468" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553104321079" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -319,6 +305,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22063038" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
